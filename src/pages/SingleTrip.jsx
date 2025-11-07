@@ -3,7 +3,7 @@ import CardCustomerContact from "../components/CardCustomerContact"
 import trips from "../data/trips.js"
 import customerContact from "../data/customerContact.js"
 import { Link } from 'react-router-dom';
-import guide from "../data/guide.js"
+// import guide from "../data/guide.js"
 
 const SingleTrip = () => {
     const { id } = useParams();
@@ -17,7 +17,7 @@ const SingleTrip = () => {
             <h1>{tripId.destinazione}</h1>
             {/* <img src= alt="" /> */}
             {customerContact.map(c => (
-                <div key={id}>
+                <div key={c.id}>
                     <CardCustomerContact customerProp={c} />
                 </div>
 

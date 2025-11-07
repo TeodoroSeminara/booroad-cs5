@@ -2,9 +2,14 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
+import { useState } from 'react';
+import customerContact from '../data/customerContact.js';
 
 
 function SearchBar() {
+    // test search
+    // const { name, surname } = { customerContact }
+    // const [searchCustomer, setSearchCustomer] = useState()
     return (
         <Navbar expand="lg">
             <Container fluid>
