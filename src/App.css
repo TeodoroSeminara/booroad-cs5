@@ -23,3 +23,21 @@ ul {
 .logo {
     width: 150px;
 }
+
+/* Card Trip */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-trip-container {
+    margin-left: 100px;
+    border: solid black 1px;
+    width: 200px;
+    height: 400px;
+}
+
+.card-trip-container img {
+    width: 200px;
+    height: 200px;
+}
