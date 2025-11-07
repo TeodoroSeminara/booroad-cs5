@@ -6,10 +6,12 @@ import { useState } from 'react';
 import customerContact from '../data/customerContact.js';
 
 
-function SearchBar() {
-    // test search
-    // const { name, surname } = { customerContact }
-    // const [searchCustomer, setSearchCustomer] = useState()
+function SearchBar({ searchCustomer, setSearchCustomer }) {
+
+    const handleSearch = (event) => {
+        setSearchCustomer(event.target.value.toLowerCase());
+    };
+
     return (
         <Navbar expand="lg">
             <Container fluid>
@@ -20,6 +22,8 @@ function SearchBar() {
                         placeholder="Search"
                         className="me-2"
                         aria-label="Search"
+                        value={searchCustomer}
+                        onChange={handleSearch}
                     />
                     <Button variant="outline-primary">Search</Button>
                 </Form>

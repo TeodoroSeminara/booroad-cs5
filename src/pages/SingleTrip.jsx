@@ -3,7 +3,8 @@ import CardCustomerContact from "../components/CardCustomerContact"
 import trips from "../data/trips.js"
 import customerContact from "../data/customerContact.js"
 import { Link } from 'react-router-dom';
-// import guide from "../data/guide.js"
+import { useState } from "react";
+import SearchBar from "../components/SearchBar.jsx";
 
 const SingleTrip = () => {
     const { id } = useParams();
@@ -12,11 +13,20 @@ const SingleTrip = () => {
         return <h1> Viaggio non trovato </h1>
     }
 
+    const [searchCustomer, setSearchCustomer] = useState("");
+
+    const filteredContacts = customerContact.filter((c) => {
+        const fullName = (c.name + " " + c.surname).toLowerCase();
+        return fullName.includes(searchCustomer)
+    })
     return (
         <>
             <h1>{tripId.destinazione}</h1>
             {/* <img src= alt="" /> */}
-            {customerContact.map(c => (
+            {/* Search bar riceve stato e setter */}
+            <SearchBar searchCustomer={searchCustomer} setSearchCustomer={setSearchCustomer} />
+
+            {filteredContacts.map(c => (
                 <div key={c.id}>
                     <CardCustomerContact customerProp={c} />
                 </div>
