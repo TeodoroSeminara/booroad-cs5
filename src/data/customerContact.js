@@ -1,3 +1,4 @@
+// Database partecipanti viaggi
 const customerContact = [
     { id: 1, name: "Luca", surname: "Ruggeri", phone: "+39 3714940738", email: "luca.ruggeri5@gmail.com", cf: "RGGLCU97B07H501A", img: "/img/guide_photos/ritaglio_01.png" },
     { id: 2, name: "Sara", surname: "Rossi", phone: "+39 334 9876543", email: "sara.rossi@email.com", cf: "RSSSRA85B45F205Z", img: "/img/guide_photos/ritaglio_02.png" },

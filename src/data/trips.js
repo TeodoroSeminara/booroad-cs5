@@ -1,3 +1,4 @@
+// Database Viaggi
 const trips = [
     { id: 1, destinazione: "Parigi", partenza: "2025-03-10", rientro: "2025-03-15", giorno: "Lunedì", compagnia_aerea: "Air France", accompagnatore: "Giulia Conti", image: "/img/trips/parigi.jpg" },
     { id: 2, destinazione: "Londra", partenza: "2025-04-05", rientro: "2025-04-10", giorno: "Sabato", compagnia_aerea: "British Airways", accompagnatore: "Marco Ferrari", image: "/img/trips/Londra 1.jpg" },

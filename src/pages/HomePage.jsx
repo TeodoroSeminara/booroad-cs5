@@ -9,7 +9,9 @@ const HomePage = () => {
         <>
             <h1>Gestione Viaggi Booroad</h1>
             <div className="card-container">
+                {/* Generazione card viaggi in base all'array */}
                 {trips.map(i => (
+                    // Link per aprire pagina singolo viaggio
                     <Link key={i.id}
                         to={`/trip/${i.id}`} >
                         <CardTrip

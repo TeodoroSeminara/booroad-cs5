@@ -5,6 +5,7 @@ function CardCustomerContact({ customerProp }) {
     const { id, name, surname, phone, email, cf, img } = customerProp;
     return (
         <>
+            {/* Lista partecipanti con info */}
             <Accordion defaultActiveKey="1">
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>{name} {surname}</Accordion.Header>
