@@ -1,0 +1,25 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Generics */
+header,
+main {
+    background-color: #36BBF0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Logo */
+.logo {
+    width: 150px;
+}
