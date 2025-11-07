@@ -1,9 +1,10 @@
 import Accordion from 'react-bootstrap/Accordion';
 
+
 function CardCustomerContact({ customerProp }) {
     const { id, name, surname, phone, email, cf, img } = customerProp;
     return (
-        <Accordion defaultActiveKey="0">
+        <Accordion defaultActiveKey="1">
             <Accordion.Item eventKey="0">
                 <Accordion.Header>{name} {surname}</Accordion.Header>
                 <Accordion.Body>
