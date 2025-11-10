@@ -1,43 +1,237 @@
-/* CSS RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* todo Radici importanti per il file CSS principale dell'applicazione */
+:root main,
+header {
+    --bs-primary: #36bbf0;
+    --bs-primary-rgb: 54, 187, 240;
+    --bs-secondary: #4ecdc4;
+    --bs-secondary-rgb: 78, 205, 196;
+    --bs-success: #28a745;
+    --bs-danger: #ff6b6b;
+    --bs-warning: #ffc107;
+    --bs-info: #17a2b8;
+    --bs-light: #f8f9fa;
+    --bs-dark: #2c3e50;
+
+    --booroad-primary: #36bbf0;
+    --booroad-primary-dark: #2898cc;
+    --booroad-primary-light: #5ccbf5;
+    --booroad-secondary: #ff6b6b;
+    --booroad-accent: #4ecdc4;
+    --booroad-dark-text: #2c3e50;
+    --booroad-light-text: #7f8c8d;
+    --booroad-border: #e9ecef;
+    --booroad-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --booroad-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --booroad-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+    --booroad-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --booroad-transition-fast: all 0.15s ease-in-out;
 }
 
-/* Generics */
-header,
-main {
-    background-color: #36BBF0;
+/* todo Body + Header */
+body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
-a {
-    text-decoration: none;
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
 }
 
-ul {
-    list-style-type: none;
+/* todo Bottoni principali */
+.btn-primary {
+    background: linear-gradient(135deg,
+            var(--booroad-primary) 0%,
+            var(--booroad-primary-dark) 100%);
+    border: none;
+    box-shadow: var(--booroad-shadow-sm);
+    transition: var(--booroad-transition);
 }
 
-/* Logo */
-.logo {
-    width: 150px;
+.btn-primary:hover {
+    background: linear-gradient(135deg,
+            var(--booroad-primary-dark) 0%,
+            var(--booroad-primary) 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--booroad-shadow);
 }
 
-/* Card Trip */
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
+/* todo NavBar */
+.booroad-logo {
+    height: 100px;
 }
 
-.card-trip-container {
-    margin-left: 100px;
-    border: solid black 1px;
-    width: 200px;
-    height: 400px;
+.navbar-brand:hover {
+    transform: scale(1.1);
 }
 
-.card-trip-container img {
-    width: 200px;
+.text-booroad-primary {
+    color: var(--booroad-primary);
+}
+
+.bg-booroad-primary {
+    background-color: var(--booroad-primary);
+}
+
+.card {
+    border: none;
+    border-radius: 1rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg,
+            var(--booroad-primary)0%,
+            var(--booroad-primary-dark) 100%);
+    color: white;
+    border-color: var(--booroad-primary);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(54, 187, 240, 0.25);
+}
+
+.booroad-trip-card {
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+
+.booroad-trip-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg,
+            var(--booroad-primary),
+            var(--booroad-accent));
+    z-index: 1;
+}
+
+.booroad-trip-card:hover {
+    transform: scale(1.05);
+    translate: 0.5s ease-in-out;
+}
+
+.booroad-trip-image {
     height: 200px;
+    object-fit: cover;
+}
+
+.customer-info {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: start;
+}
+
+.customer-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.customer-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.customer-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--booroad-primary);
+    box-shadow: var(--booroad-shadow-sm);
+}
+
+/* todo Responsive */
+@media (max-width: 576px) {
+    .customer-info {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .customer-avatar {
+        margin: 0 auto;
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    transition: var(--booroad-transition-fast);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-1px);
+}
+
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: white;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:active {
+    color: white;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    color: #0b5ed7;
+    cursor: pointer;
+}
+
+.icon {
+    display: block;
+    transition: transform .25s ease;
+}
+
+.plane-add:hover .icon {
+    transform: translateX(3px) translateY(-1px) rotate(-6deg);
+}
+
+.plane-add:active .icon {
+    transform: translateX(1px) translateY(0) rotate(-2deg);
+}
+
+.plane .trail {
+    transition: opacity .25s ease, transform .25s ease;
+    transform: scaleX(.6);
+    transform-origin: left;
+}
+
+.plane-add:hover .trail {
+    opacity: .7;
+    transform: scaleX(1);
+}
+
+.icon-btn:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+.plane-icon {
+    font-size: 150px;
+    color: #36bbf0;
+    align-self: center;
 }
