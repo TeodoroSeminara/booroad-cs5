@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom"
 import CardCustomerContact from "../components/CardCustomerContact"
-import trips from "../data/trips.js"
 import { Link } from 'react-router-dom';
 import { useSearch } from "../context/SearchContext";
+import { useTravel } from "../context/TravelContext";
 
 
 const SingleTrip = () => {
@@ -10,9 +10,11 @@ const SingleTrip = () => {
     const { id } = useParams();
     // destrutturato context per utilizzo array filtrato del search
     const { filteredContacts } = useSearch();
+    // Recupero i viaggi dal context
+    const { travels } = useTravel();
 
-    // Confrontiamo id dell'array trips con id URL
-    const tripId = trips.find((i) => i.id === parseInt(id));
+    // Confrontiamo id dell'array travels con id URL
+    const tripId = travels.find((i) => i.id === parseInt(id));
     // Se ID non esiste messaggio di errore
     if (!tripId) {
         return (

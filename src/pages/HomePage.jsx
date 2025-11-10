@@ -45,6 +45,7 @@ import CardTrip from "../components/CardTrip";
 import { useTravel } from "../context/TravelContext";
 import AddTravel from "../components/AddTravel";
 
+
 const HomePage = () => {
     const { travels } = useTravel();
 
