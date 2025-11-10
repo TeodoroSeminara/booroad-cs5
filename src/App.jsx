@@ -6,23 +6,26 @@ import HomePage from './pages/HomePage'
 import SingleTrip from './pages/SingleTrip'
 import { SearchProvider } from './context/SearchContext'
 import NewTravel from './pages/NewTravel'
+import { TravelProvider } from './context/TravelContext'
 
 function App() {
 
   return (
     <>
-      <SearchProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route element={<DefaultLayout />}>
-              <Route index element={<HomePage />} />
-              <Route path='/trip/:id' element={<SingleTrip />} />
-              <Route path='/newtravel' element={<NewTravel />} />
-              <Route path='*' element={<NotFoundPage />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </SearchProvider>
+      <TravelProvider>
+        <SearchProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route element={<DefaultLayout />}>
+                <Route index element={<HomePage />} />
+                <Route path='/trip/:id' element={<SingleTrip />} />
+                <Route path='/newtravel' element={<NewTravel />} />
+                <Route path='*' element={<NotFoundPage />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </SearchProvider>
+      </TravelProvider>
     </>
   )
 }
