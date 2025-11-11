@@ -11,11 +11,6 @@ export default function AddTravel() {
                     </h5>
                     <div className="card-text">
                         <div className="row g-2 mb-2">
-                            {/* <div className="col-12">
-                                <small className="text-muted d-flex align-items-center">
-                                    <strong className="me-2">Partenza:</strong>
-                                </small>
-                            </div> */}
                         </div>
                         <div className="mt-auto pt-3">
                             <div className="btn btn-outline-primary btn-sm w-100">

@@ -239,7 +239,7 @@ header {
 /* CSS per la pagina Aggiungi Nuovo Viaggio */
 
 .new-travel-container {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
     min-height: 100vh;
     padding: 2rem 0;
 }
@@ -323,7 +323,7 @@ header {
 }
 
 .new-travel-submit-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
     border: none;
     border-radius: 12px;
     padding: 1rem 3rem;
@@ -332,15 +332,15 @@ header {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    /* box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3); */
     position: relative;
     overflow: hidden;
 }
 
 .new-travel-submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
-    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+    box-shadow: 0 12px 35px rgba(102, 144, 234, 0.4);
+    background: linear-gradient(135deg, #87ccf0 0%, #64a5f6 100%);
 }
 
 .new-travel-submit-btn:active {
@@ -358,9 +358,9 @@ header {
     transition: left 0.5s;
 }
 
-.new-travel-submit-btn:hover::before {
+/* .new-travel-submit-btn:hover::before {
     left: 100%;
-}
+} */
 
 /* Feedback di validazione personalizzato */
 .new-travel-form .valid-feedback {
@@ -468,13 +468,13 @@ header {
 }
 
 /* Effetti hover per i campi */
-.new-travel-form .form-group {
+/* .new-travel-form .form-group {
     transition: transform 0.2s ease;
-}
+} */
 
-.new-travel-form .form-group:hover {
+/* .new-travel-form .form-group:hover {
     transform: translateY(-1px);
-}
+} */
 
 /* Stile per il form quando Ã¨ validato */
 .new-travel-form.was-validated .form-control:valid,

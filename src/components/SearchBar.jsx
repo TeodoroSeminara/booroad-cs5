@@ -28,16 +28,6 @@ function SearchBar({ searchCustomer, setSearchCustomer }) {
                                 value={searchCustomer}
                                 onChange={handleSearch}
                             />
-                            {/* Btn X per searchbar */}
-                            {/* {searchCustomer && (
-                                <button
-                                    className="btn btn-outline-secondary"
-                                    type="button"
-                                    onClick={() => setSearchCustomer('')}
-                                >
-                                    <i className="bi bi-x-lg"></i>
-                                </button>
-                            )} */}
                         </div>
                     </div>
                 </div>

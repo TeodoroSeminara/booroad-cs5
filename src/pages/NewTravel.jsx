@@ -316,7 +316,7 @@ function NewTravel() {
         setValidated(false);
 
         // Mostra un messaggio di successo
-        alert("Viaggio aggiunto con successo!");
+        // alert("Viaggio aggiunto con successo!");
 
         // Naviga alla homepage dopo aver aggiunto il viaggio
         navigate("/");
@@ -398,7 +398,7 @@ function NewTravel() {
                                         >
                                             <option value="">Seleziona un collaboratore</option>
                                             {guide.map((g) => (
-                                                <option key={g.id} value={g.id}>
+                                                <option key={g.id} value={g.collaboratore}>
                                                     {g.collaboratore}
                                                 </option>
                                             ))}
@@ -419,7 +419,7 @@ function NewTravel() {
                                         >
                                             <option value="0">Seleziona una compagnia</option>
                                             {trips.map((i) => (
-                                                <option key={i.id} value={i.id} >{i.compagnia_aerea}</option>
+                                                <option key={i.id} value={i.compagnia_aerea} >{i.compagnia_aerea}</option>
                                             ))}
                                         </Form.Select>
                                         <Form.Control.Feedback type="invalid">
