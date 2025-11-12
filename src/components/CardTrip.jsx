@@ -35,7 +35,7 @@ export default function CardTrip({ tripProp }) {
                     </div>
                     <div className="mt-auto pt-3">
                         <div className="btn btn-outline-primary btn-sm w-100">
-                            Vedi Dettagli
+                            Vedi Partecipanti
                         </div>
                     </div>
                 </div>
